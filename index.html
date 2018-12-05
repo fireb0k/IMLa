@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Restaurnat | Inicio</title>
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Gloria+Hallelujah|Open+Sans|Paytone+One|Poppins|Roboto|Roboto+Mono|Ubuntu" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	
+</head>
+<body>
+	
+	<nav id="nav">
+		<ul id="ulnav">
+			<li><a class="rslink" href="">Inicio</a></li>
+			<li><a class="rslink" href="#ubic">Ubicación</a></li>
+			<li><a class="rslink" href="#p">Menu</a></li>
+			<li><a class="rslink" href="#delivery">Delivery</a></li>
+			<li><a class="rslink" href="#foo">Mas informacion</a></li>
+		</ul>
+		
+	</nav>
+	<div id="mc">
+		<span class="menumb"></span>
+	</div>
+	<script>
+		
+		
+		$('#mc').click( function () {
+
+
+			$('#nav').fadeToggle(function(){
+				$('li').click(function(){
+					$('#nav').fadeOut(function(){
+						$('span').removeClass('wap').addClass('menumb')
+					})
+				})
+			})
+			$('span').removeClass('menumb').addClass('wap').click(function(){
+				
+			})
+			
+		})
+		
+		$(document).ready(function(){
+			
+			$('form').submit(function(e){
+				e.preventDefault()
+				
+				var nombre=$('.delR:eq(0)').val()
+				var direccion=$('.delR:eq(1)').val()
+				var Pedido=$('.delR:eq(2)').val()
+				alert('Solicitud De Pedido ' + '\n'+'Nombre :'+nombre+"\n"+'Dirección :'+direccion+'\n'+'Pedido : '+Pedido+'\n'+'Gracias por su Pedido')
+				$('.delR:eq(0)').val('')
+				$('.delR:eq(1)').val('')
+				$('.delR:eq(2)').val('')
+			
+			})
+			
+			$('.boxp').mouseover(function(){
+				$(this).css({backgroundColor:'rgba(0,0,0,.1)',transform:'scale(1.1)', transition: '.3s ease',boxShadow:'2px 5px 10px rgba(0,0,0,.5)'})
+				
+			}).mouseout(function(){
+				$(this).css({backgroundColor:'rgba(225,225,225,.5)',transform:'scale(1)', transition: '.3s ease',boxShadow:'none'})
+			})
+		})
+		
+		
+
+
+	</script>
+	<main id="main">
+		<div id="sect">
+			<div id="iconres"></div>
+			<p id="tilere">Sabores del Perú</p>
+			<p id="ub">AV. San Juan de Dios</p>
+			<p id="ht">10:00am -  3:00pm  </p>
+			<p id="inR">Disfruta el sabor, la textura, el aroma y el color de los más exquisitos platos peruanos. 
+				El Restaurante Sabores del Perú ubicado en el cerdado de Arequipa te ofrecerá una gran experiencia. La espléndida gastronomía peruana es la protagonista en su cocina y te brinda  deliciosos platillos. Puedes visitarnos cualquier dia de la semana y  relajarte en sus cómodas instalaciones. Durante tu estadía te brindan conexión a Internet WiFi gratis para que puedas compartir con tus amigos lo bien que la estás pasando. </p>
+			<div id="rbr">Reserva Tu Mesa</div>
+		</div>
+		<div class="platos" id="p">
+			<div class="boxp">
+				<div class="com">
+					<img src="imagenes/lomo saltado.jpg" alt="">
+				</div>
+				<p>Lomo Saltado</p>
+			</div>
+			<div class="boxp">
+				<div class="com">
+					<img src="imagenes/papa ala huancaina.jpeg" alt="">
+				</div>
+				<p>Papa a la huancaína</p>
+			</div>
+			<div class="boxp">
+				<div class="com">
+					<img src="imagenes/ceviche.jpg" alt="">
+				</div>
+				<p>Ceviche</p>
+			</div>
+		</div>
+		<div class="platos">
+			<div class="boxp">
+				<div class="com">
+					<img src="imagenes/spaguites.jpg" alt="">
+				</div>
+				<p>Spaguetis con pasta</p>
+			</div>
+			<div class="boxp">
+				<div class="com">
+					<img src="imagenes/causa rellena.jpg" alt="">
+				</div>
+				<p>Causa Rellena</p>
+			</div>
+			<div class="boxp">
+				<div class="com">
+					<img src="imagenes/aji de gallina.jpg" alt="">
+				</div>
+				<p>Aji de Gallina</p>
+			</div>
+		</div>
+		<div class="platos">
+			<div class="boxp">
+				<div class="com">
+					<img src="imagenes/rocoto relleno.jpeg" alt="">
+				</div>
+				<p>Rocoto Relleno</p>
+			</div>
+			<div class="boxp">
+				<div class="com">
+					<img src="imagenes/arroz chaufa.jpg" alt="">
+				</div>
+				<p>Arroz Chaufa</p>
+			</div>
+			<div class="boxp">
+				<div class="com">
+					<img src="imagenes/Tacu Tacu.jpg" alt="">
+				</div>
+				<p>Tacu Tacu</p>
+			</div>
+		</div>
+		<div id="ubic">
+			<div id="infoub">El restaurant esta ubicado en centro de Arequipa exactamente en la Calle Moral 109 </div>
+			<div id="maps">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4551.714626828757!2d-71.53608037177565!3d-16.398370176498666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa7c51250cbd76c54!2sLa+Caleta+Sabores+Peruanos!5e0!3m2!1ses-419!2spe!4v1541777352126" ></iframe>
+			</div>
+		</div>
+		<div id="delivery">
+			
+			<form id="fd">
+				<label class="ld">Nombre y Apellido</label>
+				<input class="delR" type="text" required>
+				<label class="ld">Direcion</label>
+				<input class="delR" type="text" required>
+				<label class="ld">Que desa pedir</label>
+				<input class="delR" type="text" required>
+				<input id="rd" type="submit" value="Realizar pedido" >
+			</form>
+		</div>
+
+	</main>
+	<footer id="foo">
+		<div id="bf">
+			<div id="ves">
+				<div id="if"></div>
+				<div class="icrs">
+					<img class="icon" src="imagenes/whastaap.png" alt="">
+					<img class="icon" src="imagenes/twiittet.png" alt="">
+					<img class="icon" src="imagenes/facebook.png" alt="">
+				</div>
+			</div>
+			
+			<div id="t">
+				<div class="tb">
+					<h3>E-Mail </h3>
+					<p>restaurantdiarojos@gmail.com</p>
+					<h3>Conectate Con Nosotros</h3>
+					<p>°Facebook</p>
+					<p>SaboresPeruanos</p>
+					<p></p>
+					<p></p>
+					<h3>Horas de Funcionamiento</h3>
+					<p>10:00 am - 3:00 pm</p>
+				</div>
+				<div class="tb">
+					<h3>Opciones de Pago</h3>
+					<p>VISA    </p>
+					<p>MASTERCARD</p>
+					<p>CMR</p>
+					<p>RIPLEY</p>
+
+				</div>
+			</div>
+		</div>
+		<p id="i">Todos los derechos reservados &copy;Restaurant 2018</p>
+
+	</footer>
+	
+	</body>
+</html>
